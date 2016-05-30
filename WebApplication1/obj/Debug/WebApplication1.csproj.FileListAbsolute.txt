@@ -1,0 +1,5 @@
+D:\SQL\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\SQL\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\SQL\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\SQL\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\SQL\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
