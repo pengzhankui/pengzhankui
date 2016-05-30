@@ -1,0 +1,5 @@
+D:\SQL\AJAX\AJAX\bin\AJAX.dll
+D:\SQL\AJAX\AJAX\bin\AJAX.pdb
+D:\SQL\AJAX\AJAX\obj\Debug\AJAX.csprojResolveAssemblyReference.cache
+D:\SQL\AJAX\AJAX\obj\Debug\AJAX.dll
+D:\SQL\AJAX\AJAX\obj\Debug\AJAX.pdb
