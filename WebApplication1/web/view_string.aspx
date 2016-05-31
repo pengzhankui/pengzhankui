@@ -51,7 +51,7 @@
             <td><%=all_info.Rows[i]["pass_word"]%></td>
             <td><%=all_info.Rows[i]["major"] %></td>
             <td><%=all_info.Rows[i]["college"] %></td>
-            <th><a href="delete.ashx?ID=<%=all_info.Rows[i]["ID"] %>"><h3 align="center" style="color:red"><%="删除"%></h3></a></th>
+            <th><a href="../handler/delete.ashx?ID=<%=all_info.Rows[i]["ID"] %>"><h3 align="center" style="color:red"><%="删除"%></h3></a></th>
         </tr>
         <%} %>
      </table>

@@ -9,7 +9,7 @@
 </head>
 <body>
     <center>
-    <form action="use_to_change_my_information.ashx?ID=<%=student_info.Rows[0]["ID"]%>" method="post">
+    <form action="../handler/use_to_change_my_information.ashx?ID=<%=student_info.Rows[0]["ID"]%>" method="post">
 name:           <br/>   <input type="text" name="name" value="<%=student_info.Rows[0]["name"] %>"/><br/>
 class_ID:        <br/>  <input type="text" name="class_ID" value="<%=student_info.Rows[0]["class ID"] %>"/><br/>
 student_number: <br/>   <input type="text" name="student_number"value="<%=student_info.Rows[0]["stdent_number"] %>"/><br/>

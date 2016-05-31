@@ -18,7 +18,7 @@ namespace WebApplication1
             context.Response.ContentType = "text/html";
             int ID = Convert.ToInt32(context.Request["ID"]);
             use_change.Executechange("delete from T_student where ID=@ID",new SqlParameter("@ID", ID));
-            context.Response.Write("<script>confirm('删除成功！');location.href='view_string.aspx';</script>");
+            context.Response.Write("<script>confirm('删除成功！');location.href='../web/view_string.aspx';</script>");
             //if (ds.Rows.Count == 0)
             //{
             //    context.Response.Write("<script>confirm('删除成功！'),location.href='view_string.aspx';");

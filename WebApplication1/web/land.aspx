@@ -47,7 +47,7 @@
 </body>
      <script type="text/javascript">
          function button_xiugai() {
-             location.href = 'use_to_change_my_information.aspx';;
+             location.href = 'use_to_change_my_information.aspx';
          }
          function button_quanbu() {
              location.href = 'view_string.aspx';
