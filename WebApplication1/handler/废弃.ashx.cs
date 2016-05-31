@@ -18,10 +18,10 @@ namespace WebApplication1
             context.Response.ContentType = "text/html";
             int action;
             int password;
-            if (context.Request["name"] != "")
+            if (context.Request["student_number"] != "")
                 try
                     {
-                        action = Convert.ToInt32(context.Request["name"]);
+                        action = Convert.ToInt32(context.Request["student_number"]);
                     }
                     catch
                     {
@@ -46,7 +46,8 @@ namespace WebApplication1
                         new SqlParameter("@number", action), new SqlParameter("@password",password));
             if (ds.Rows.Count == 0)
             {
-                context.Response.Write("<script>confirm('账号不存在或者密码错误');location.href='../html/Html1.html';</script>");
+                context.Response.Write("账号不存在或者密码错误");
+                //context.Response.Write("<script>confirm('账号不存在或者密码错误');location.href='../html/Html1.html';</script>");
                 //context.Response.Redirect("Html1.html");跳转
                 //js跳转location.href='Html1.html';
             }
@@ -58,7 +59,8 @@ namespace WebApplication1
                 //string college = (string)row["college"];
                 string cookie=(string)row["cookie"];
                 context.Response.SetCookie(new HttpCookie("user",cookie));
-                context.Response.Write("<script>alert('欢迎');location.href='../web/land.aspx';</script>");
+                context.Response.Write("欢迎");
+                //context.Response.Write("<script>alert('欢迎');location.href='../web/land.aspx';</script>");
                 //context.Response.Write("姓名：" + name + "<br/>班级：" + classID + "<br/>专业：" + major + "<br/>学院：" + college);
             }
         }

@@ -19,6 +19,7 @@ namespace WebApplication1
             string name, major, college,cookie;
             int ID = Convert.ToInt32(context.Request["ID"]);
             if (context.Request["name"] != "" && context.Request["class_ID"] != "" && context.Request["student_number"] != "" && context.Request["password"] != "" && context.Request["major"] != "" && context.Request["college"] != "" && context.Request["cookie"] != "")
+            {
                 try
                 {
                     name = context.Request["name"];
@@ -33,25 +34,30 @@ namespace WebApplication1
                 {
                     name = "aaa"; student_number = 102; password = 123456; class_ID = 102; major = "dsa"; college = "pri"; cookie = "aaa";
                     context.Response.Write("<script>confirm('由于某些原因1输入不正确，请重新输入！');location.href='../web/use_to_change_my_information.aspx';</script>");
+                    return;
                 }
+            }
             else
             {
                 name = "aaa"; student_number = 102; password = 123456; class_ID = 102; major = "dsa"; college = "pri"; cookie = "aaa";
                 context.Response.Write("<script>confirm('由于某些原因2输入不正确，请重新输入！');location.href='../web/use_to_change_my_information.aspx';</script>");
+                return;
             }
-            try
-            {
-                use_change.Executechange("insert into T_student(name,[class ID],stdent_number,pass_word,major,college,VIP,Cookie) values (@name,@class_ID,@student_number,@password,@major,@college,'False',@cookie)",
-                        new SqlParameter("@name", name), new SqlParameter("@student_number", student_number), new SqlParameter("@password", password), new SqlParameter("@major", major), new SqlParameter("@college", college), new SqlParameter("@cookie", cookie),new SqlParameter("@class_ID",class_ID));
-                use_change.Executechange("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
-                context.Response.Write("<script>confirm('更改成功！');location.href='../html/Html1.html';</script>");
-            }
-            catch
-            {
-                context.Response.Write("<script>confirm('由于某些原因3输入不正确，请重新输入！');location.href='../web/use_to_change_my_information.aspx';</script>");
-            }
-            //use_change.Executechange("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
-            //context.Response.Write("<script>confirm('更改成功！');location.href='Html1.html';</script>");
+                try
+                {
+                    use_change.Executechange("insert into T_student(name,[class ID],stdent_number,pass_word,major,college,VIP,Cookie) values (@name,@class_ID,@student_number,@password,@major,@college,'False',@cookie)",
+                            new SqlParameter("@name", name), new SqlParameter("@student_number", student_number), new SqlParameter("@password", password), new SqlParameter("@major", major), new SqlParameter("@college", college), new SqlParameter("@cookie", cookie),new SqlParameter("@class_ID",class_ID));
+                    use_change.Executechange("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
+                    context.Response.Write("<script>confirm('更改成功！');location.href='../GL_login.html';</script>");
+                }
+                catch
+                {
+                    context.Response.Write("<script>confirm('由于某些原因3输入不正确，请重新输入！');location.href='../web/use_to_change_my_information.aspx';</script>");
+                    return;
+                }
+                //use_change.Executechange("delete from T_student where ID=@ID", new SqlParameter("@ID", ID));
+                //context.Response.Write("<script>confirm('更改成功！');location.href='Html1.html';</script>");
+          
         }
 
         public bool IsReusable

@@ -33,21 +33,25 @@ namespace WebApplication1
                 {
                     name = "aaa"; student_number = 102; password = 123456; class_ID = 102; major = "dsa"; college = "pri"; cookie = "aaa";
                     context.Response.Write("<script>confirm('由于某些原因1输入不正确，请重新输入！');location.href='../html/register.html';</script>");
+                    return;
                 }
             else
             {
                 name = "aaa"; student_number = 102; password = 123456; class_ID = 102; major = "dsa"; college = "pri"; cookie = "aaa";
                 context.Response.Write("<script>confirm('由于某些原因2输入不正确，请重新输入！');location.href='../html/register.html';</script>");
+                return;
             }
             try
             {
                 use_change.Executechange("insert into T_student(name,[class ID],stdent_number,pass_word,major,college,VIP,Cookie) values (@name,@class_ID,@student_number,@password,@major,@college,'False',@cookie)",
                         new SqlParameter("@name", name), new SqlParameter("@student_number", student_number), new SqlParameter("@password", password), new SqlParameter("@major", major), new SqlParameter("@college", college), new SqlParameter("@cookie", cookie), new SqlParameter("@class_ID", class_ID));
-                context.Response.Write("<script>confirm('注册成功！');location.href='../html/Html1.html';</script>");
+                context.Response.Write("<script>confirm('注册成功！');location.href='../GL_login.html';</script>");
+                return;
             }
             catch
             {
                 context.Response.Write("<script>confirm('由于某些原因3输入不正确，请重新输入！');location.href='../html/register.html';</script>");
+                return;
             }
         }
 

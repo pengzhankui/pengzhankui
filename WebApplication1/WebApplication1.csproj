@@ -57,7 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GL_login.html" />
+    <Content Include="js\Ajax.js" />
     <Content Include="html\Html1.html" />
+    <Content Include="js\jquery1.js" />
+    <Content Include="js\Particleground.js" />
+    <Content Include="js\verificationNumbers.js" />
+    <Content Include="style2.css" />
     <Content Include="web\land.aspx" />
     <Content Include="html\register.html" />
     <Content Include="html\User_change.html" />
@@ -68,11 +74,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="handler\Ajax_text.ashx.cs">
+      <DependentUpon>Ajax_text.ashx</DependentUpon>
+    </Compile>
     <Compile Include="handler\delete.ashx.cs">
       <DependentUpon>delete.ashx</DependentUpon>
     </Compile>
-    <Compile Include="handler\Handler1.ashx.cs">
-      <DependentUpon>Handler1.ashx</DependentUpon>
+    <Compile Include="handler\废弃.ashx.cs">
+      <DependentUpon>废弃.ashx</DependentUpon>
     </Compile>
     <Compile Include="web\land.aspx.cs">
       <DependentUpon>land.aspx</DependentUpon>
@@ -106,10 +115,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="handler\Handler1.ashx" />
+    <Content Include="handler\废弃.ashx" />
     <Content Include="handler\delete.ashx" />
     <Content Include="handler\use_to_change_my_information.ashx" />
     <Content Include="handler\register.ashx" />
+    <Content Include="handler\Ajax_text.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,9 +127,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
