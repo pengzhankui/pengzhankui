@@ -13,12 +13,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebApplication1</RootNamespace>
     <AssemblyName>WebApplication1</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,36 +40,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GL_login.html" />
     <Content Include="js\Ajax.js" />
-    <Content Include="html\Html1.html" />
+    <Content Include="html\废弃_html.html" />
     <Content Include="js\jquery1.js" />
     <Content Include="js\Particleground.js" />
     <Content Include="js\verificationNumbers.js" />
+    <Content Include="style.css" />
     <Content Include="style2.css" />
     <Content Include="web\land.aspx" />
     <Content Include="html\register.html" />
     <Content Include="html\User_change.html" />
     <Content Include="web\use_to_change_my_information.aspx" />
-    <Content Include="web\view_string.aspx" />
+    <Content Include="web\central frame.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -106,12 +106,12 @@
     <Compile Include="web\use_to_change_my_information.aspx.designer.cs">
       <DependentUpon>use_to_change_my_information.aspx</DependentUpon>
     </Compile>
-    <Compile Include="web\view_string.aspx.cs">
-      <DependentUpon>view_string.aspx</DependentUpon>
+    <Compile Include="web\central frame.aspx.cs">
+      <DependentUpon>central frame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web\view_string.aspx.designer.cs">
-      <DependentUpon>view_string.aspx</DependentUpon>
+    <Compile Include="web\central frame.aspx.designer.cs">
+      <DependentUpon>central frame.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +141,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>19409</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:48946/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

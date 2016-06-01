@@ -1,24 +1,27 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="view_string.aspx.cs" Inherits="WebApplication1.view_string" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="central frame.aspx.cs" Inherits="WebApplication1.view_string" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <table class="table" border ="0" align="center" >
+        <link href="../style.css" type="text/css" rel="stylesheet"/>
+    <div id="listBox">
+        <div id="Container">
+        <table id="table_right" style="margin:25px;float:none;">
         <tr>
-            <th>ID</th>
-            <th>name</th>
-            <th>class_ID</th>
-            <th>stdent_number</th>
-            <th>password</th>
-            <th>major</th>
-            <th>college</th>
+            <th class="t1">ID</th>
+            <th class="t2">name</th>
+            <th class="t3">class_ID</th>
+            <th class="t3">stdent_number</th>
+            <th class="t3">password</th>
+            <th class="t4">major</th>
+            <th class="t4">college</th>
+            <th class="t5">cookie</th>
          </tr>      
         <tr>
             <td><%=stdent_info.Rows[0]["ID"] %></td>
@@ -27,21 +30,22 @@
             <td><%=stdent_info.Rows[0]["stdent_number"] %></td>
              <td><%=stdent_info.Rows[0]["pass_word"] %></td>
             <td><%=stdent_info.Rows[0]["major"] %></td>
-            <td><%=stdent_info.Rows[0]["college"] %></td>
+            <td><%=stdent_info.Rows[0]["college"]%></td>
+            <td><%=stdent_info.Rows[0]["Cookie"]%></td>
         </tr>
      </table>
-    <table class="table" border="1" align="center">
+    <table id="table_left" style="margin:25px;float:none;">
        <%for (int i = all_info.Rows.Count - 1; i > -1 && VIP; --i)
          {if (Convert.ToInt32(all_info.Rows[i]["ID"]) == VIP_ID) continue;%>
         <tr>
-            <th>ID</th>
-            <th>name</th>
-            <th>class_ID</th>
-            <th>stdent_number</th>
-            <th>password</th>
-            <th>major</th>
-            <th>college</th>
-            <th>功能</th>
+            <th class="t1">ID</th>
+            <th class="t2">name</th>
+            <th class="t3">class_ID</th>
+            <th class="t3">stdent_number</th>
+            <th class="t3">password</th>
+            <th class="t4">major</th>
+            <th class="t4">college</th>
+            <th class="t5">功能</th>
          </tr>
         <tr>
             <td><%=all_info.Rows[i]["ID"] %></td>
@@ -61,6 +65,7 @@
         <h1 align="center" style="color:red"><%="你不是管理员，不可以查看其他人的信息" %></h1>
         <%} %>
     </div>
+        </div>
     </form>
 </body>
 </html>
