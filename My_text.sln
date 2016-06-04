@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{57BCC875-993B-4C6F-94BA-8CF0EFA4E333}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_text", "WebApplication1\My_text.csproj", "{57BCC875-993B-4C6F-94BA-8CF0EFA4E333}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
