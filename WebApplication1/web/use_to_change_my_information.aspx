@@ -91,29 +91,29 @@ cookie:    <br/>        <input type="text" name="cookie"value="<%=student_info.R
     </form>--%>
     <dl class="admin_login">
         <dt>
-            <strong>这是一个很漂亮的登陆页面</strong>
+            <strong>请认真核对你要修改的信息</strong>
             <em>Management System</em>
         </dt>
         <dd class="user_icon">
-            <input type="text" placeholder="姓名，<%=student_info.Rows[0]["name"] %>" id="myname" class="login_txtbx" />
+            <input type="text" placeholder="姓名：<%=student_info.Rows[0]["name"] %>" id="myname" class="login_txtbx" />
         </dd>
         <dd class="pwd_icon">
-            <input type="text" placeholder="班级，<%=student_info.Rows[0]["class ID"] %>" id="class_ID" class="login_txtbx" />
+            <input type="text" placeholder="班级：<%=student_info.Rows[0]["class ID"] %>" id="class_ID" class="login_txtbx" />
         </dd>
         <dd class="user_icon">
-            <input type="text" placeholder="学号，<%=student_info.Rows[0]["stdent_number"] %>" id="student_number" class="login_txtbx" />
+            <input type="text" placeholder="学号：<%=student_info.Rows[0]["stdent_number"] %>" id="student_number" class="login_txtbx" />
         </dd>
         <dd class="user_icon">
-            <input type="password" placeholder="密码，<%=student_info.Rows[0]["pass_word"] %>" id="password" class="login_txtbx" />
+            <input type="password" placeholder="密码：<%=student_info.Rows[0]["pass_word"] %>" id="password" class="login_txtbx" />
         </dd>
         <dd class="user_icon">
-            <input type="text" placeholder="专业，<%=student_info.Rows[0]["major"] %>" id="major" class="login_txtbx" />
+            <input type="text" placeholder="专业：<%=student_info.Rows[0]["major"] %>" id="major" class="login_txtbx" />
         </dd>
         <dd class="user_icon">
-            <input type="text" placeholder="学院，<%=student_info.Rows[0]["college"] %>" id="college" class="login_txtbx" />
+            <input type="text" placeholder="学院：<%=student_info.Rows[0]["college"] %>" id="college" class="login_txtbx" />
         </dd>
         <dd class="user_icon">
-            <input type="text" placeholder="Cookie，<%=student_info.Rows[0]["cookie"] %>" id="cookie" class="login_txtbx" />
+            <input type="text" placeholder="Cookie：<%=student_info.Rows[0]["cookie"] %>" id="cookie" class="login_txtbx" />
         </dd>
         <dd class="val_icon">
             <div class="checkcode">
